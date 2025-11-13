@@ -37,6 +37,11 @@ const UserSchema = new Schema({
         type: Array,
         required: false,
         default: []
+    },
+    isEmailVerified: {
+        type: Boolean,
+        required: false,
+        default: false
     }
 });
 
