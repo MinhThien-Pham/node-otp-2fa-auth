@@ -1,7 +1,7 @@
+// src/domains/emailVerification/model.js
 const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
 
-const UserOTPVerificationSchema = new Schema({
+const UserOTPVerificationSchema = new mongoose.Schema({
     userId:{
         type: mongoose.Schema.Types.ObjectId,
         required: true,
@@ -12,10 +12,12 @@ const UserOTPVerificationSchema = new Schema({
     }, 
     createdAt:{
         type: Date,
+        timestamps: true,
         required: true
     },
     expiresAt:{
         type: Date,
+        timestamps: true,
         required: true
     },
     purpose: {
